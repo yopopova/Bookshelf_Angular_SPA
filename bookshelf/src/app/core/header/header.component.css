@@ -1,21 +1,21 @@
-.app-header {
+#app-header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #26266E;
+    background-color: #010048;
 }
 
-.menu {
+#menu {
     padding: 20px;
 }
 
-.menu > li {
+#menu > li {
     display: inline-block;
     list-style: none;
     padding: 15px;
 }
 
-.menu > li > a {
+#menu > li > a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
