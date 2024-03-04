@@ -1,0 +1,23 @@
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #26266E;
+}
+
+.menu {
+    padding: 20px;
+}
+
+.menu > li {
+    display: inline-block;
+    list-style: none;
+    padding: 15px;
+}
+
+.menu > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
