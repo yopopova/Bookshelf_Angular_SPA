@@ -1,0 +1,43 @@
+h3 {
+    color: #E779ED;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#app-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #010048;
+    padding: 30px;
+}
+
+#footer-menu > ul > li {
+    list-style-type: none;
+}
+
+#footer-menu > ul > li > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#footer-contacts {
+    color: #ffffff;
+}
+
+#footer-social > ul > li {
+    list-style-type: none;
+}
+
+.social-icon > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-icon > a > i {
+    padding-right: 30px;
+}
+
+.social-icon > a > i > span {
+    font-family: "Century Gothic", sans-serif;
+    padding-left: 15px;
+}
