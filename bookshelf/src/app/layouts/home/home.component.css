@@ -9,7 +9,7 @@
 }
 
 #banner-text {
-    margin: 230px 0 0 35px;
+    margin: 350px 0 0 70px;
     width: 40%;
     color: #010048;
 }
@@ -38,4 +38,37 @@
     text-transform: uppercase;
     font-weight: bold;
     color: #ffffff;
+}
+
+#main-div {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ECECEC;
+    padding: 60px;
+}
+
+#main-div > h1 {
+    color: #010048;
+}
+
+#main-div > div {
+    width: 25%;
+    text-align: center;
+}
+
+#main-div > div > h1 {
+    font-size: 22px;
+    color: #E779ED;
+    margin-bottom: 10px;
+}
+
+#main-div > div > p {
+    color: #010048;
+}
+
+#main-div > div > img {
+    width: 180px;
+    height: 260px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px #000000;
 }
