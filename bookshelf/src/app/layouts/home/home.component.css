@@ -1,0 +1,41 @@
+#hero-image {
+    background-image: url('https://www.theglobeandmail.com/resizer/v2/2TEQON33AVGODLO4EMDRAS4VQM.JPG?auth=f92e55525244f840f8f80ec93c81837da7f4d5543ed1e541d51a0ec086eab12b&width=1200&height=800&quality=80');
+    height: 40vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#banner-text {
+    margin: 230px 0 0 35px;
+    width: 40%;
+    color: #010048;
+}
+
+#banner-text h1 {
+    font-size: 2.3rem;
+}
+
+#banner-text p {
+    margin: 15px 0;
+    font-size: 1.3rem;
+}
+
+#catalog-btn {
+    background-color: #E779ED;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-size: 1vw;
+    margin-top: 15px;
+    box-shadow: 0 0 10px #000000;
+}
+
+#catalog-btn a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+}
