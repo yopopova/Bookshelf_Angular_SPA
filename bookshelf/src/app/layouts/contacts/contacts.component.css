@@ -1,0 +1,36 @@
+#app-contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+#app-map > iframe {
+    height: 85vh;
+}
+
+#contacts-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#contacts-info > div {
+    text-align: center;
+}
+
+#contacts-info > div > i {
+    background-color: #E779ED;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#contacts-info > div > h3 {
+    color: #E779ED;
+    padding-bottom: 15px;
+}
+
+#contacts-info > div > p {
+    color: #010048;
+}
