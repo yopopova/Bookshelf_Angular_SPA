@@ -15,9 +15,24 @@
     padding: 15px;
 }
 
-#menu > li > a {
+a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+#register > a,
+.log-in-out > a {
+    border-radius: 15px;
+    padding: 8px 15px;
+}
+
+#register > a {
+    background-color: #ffffff;
+    color: #010048;
+}
+
+.log-in-out > a {
+    background-color: #E779ED;
 }
