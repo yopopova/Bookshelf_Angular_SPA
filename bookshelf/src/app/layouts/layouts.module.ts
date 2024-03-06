@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     ContactsComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { LoginComponent } from './login/login.component';
   exports: [
     HomeComponent,
     ContactsComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ]
 })
 export class LayoutsModule { }
