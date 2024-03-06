@@ -1,6 +1,5 @@
-.main-div {
-    background-image: url('https://www.realsimple.com/thmb/KrGb42aamhHKaMzWt1Om7U42QsY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/great-books-for-anytime-2000-4ff4221eb1e54b659689fef7d5e265d5.jpg');
-    /* background-image: url('https://static.independent.co.uk/2023/09/14/14/books%20.jpg?quality=75&width=1200&auto=webp'); */
+#main-div {
+    background-image: url('https://www.thedenizen.co.nz/wp-content/uploads/2022/12/hero-1.jpg');
     height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +9,7 @@
     align-items: center;
 }
 
-.form {
+#form {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -21,18 +20,10 @@
     max-width: 35%;
 }
 
-.links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
+#heading {
+    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-}
-
-.links > a {
-    text-decoration: none;
-    color: #808080;
 }
 
 .input-fields {
@@ -67,4 +58,5 @@
     padding: 10px 30px;
     box-shadow: 0 0 8px #808080;
     cursor: pointer;
+    margin: 20px;
 }
