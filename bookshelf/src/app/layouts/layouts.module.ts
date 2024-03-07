@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     ContactsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CatalogComponent
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     ContactsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CatalogComponent
   ]
 })
 export class LayoutsModule { }

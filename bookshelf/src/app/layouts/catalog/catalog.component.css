@@ -1,0 +1,17 @@
+#hero-image {
+    background-image: url('https://static.independent.co.uk/2023/09/14/14/books%20.jpg?quality=75&width=1200&auto=webp');
+    height: 40vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner-text > h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 0 20px #000000;
+}
