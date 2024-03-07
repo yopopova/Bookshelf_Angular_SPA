@@ -1,0 +1,36 @@
+#error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#error-message > h1 {
+    color: #E779ED;
+    font-size: 10rem;
+}
+
+#error-message > p {
+    color: #010048;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#error-message > button {
+    border-radius: 10px;
+    padding: 8px 15px;
+    background-color: #E779ED;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #000000;
+}
+
+#error-image {
+    background-image: url('https://www.thoughtco.com/thmb/Hb55efckc6j-43cq-PjiUUkN-WE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-826471232-9ae66e91a4b54c2f8ffc3530a5bae5de.jpg');
+    height: 40vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
