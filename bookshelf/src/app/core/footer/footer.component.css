@@ -41,3 +41,18 @@ h3 {
     font-family: "Century Gothic", sans-serif;
     padding-left: 15px;
 }
+
+#footer-copyright {
+    margin-top: 70px;
+}
+
+#footer-copyright > p {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+#footer-copyright > p > a {
+    color: #E779ED;
+    text-decoration: none;
+    font-weight: bold;
+}
