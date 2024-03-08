@@ -49,10 +49,4 @@ h3 {
 #footer-copyright > p {
     color: #ffffff;
     margin-top: 10px;
-}
-
-#footer-copyright > p > a {
-    color: #E779ED;
-    text-decoration: none;
-    font-weight: bold;
-}
+} 
