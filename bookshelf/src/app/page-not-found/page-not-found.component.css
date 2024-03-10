@@ -16,12 +16,14 @@
     font-weight: bold;
 }
 
-#error-message > button {
+#error-message > a {
     border-radius: 10px;
     padding: 8px 15px;
     background-color: #E779ED;
     color: #ffffff;
+    text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
     border: none;
     margin-top: 20px;
     box-shadow: 0 0 5px #000000;
