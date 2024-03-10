@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutsRoutingModule } from './layouts-routing.module';
 
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from '../home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
     ContactsComponent
   ],
   imports: [
@@ -17,7 +16,6 @@ import { ContactsComponent } from './contacts/contacts.component';
     LayoutsRoutingModule
   ],
   exports: [
-    HomeComponent,
     ContactsComponent
   ]
 })
