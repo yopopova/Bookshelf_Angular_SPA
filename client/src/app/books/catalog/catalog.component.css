@@ -40,6 +40,10 @@
     color: #010048;
 }
 
+#main-div > div > p > span {
+    font-weight: bold;
+}
+
 #main-div > div > img {
     width: 180px;
     height: 260px;
