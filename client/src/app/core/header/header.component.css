@@ -22,6 +22,11 @@ a {
     font-weight: bold;
 }
 
+#app-logo > a > p {
+    text-transform: none;
+    font-size: 2.5rem;
+}
+
 #register > a,
 .log-in-out > a {
     border-radius: 15px;
