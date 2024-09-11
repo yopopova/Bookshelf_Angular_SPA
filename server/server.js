@@ -1534,6 +1534,56 @@
                 _id: "e1b30a20-011b-4cc7-a85c-0bc01a361c79",
             }
     	},
+        books: {
+    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			title: "The Count of Monte Cristo",
+                cover: "https://images.penguinrandomhouse.com/cover/9780451529701",
+                author: "Alexandre Dumas",
+                year: "2005",
+                pages: "528",
+                price: "$6.95",
+    			description: "In the post-Napoleonic era, a young sailor from Marseilles is poised to become captain of his own ship and marry his beloved. But jealous enemies provoke his arrest, condemning Edmond Dantès to lifelong imprisonment in the infamous Château d’If. There, his sole companion reveals his secret plan to escape, as well as the location of a trove of riches hidden on a remote island. Determined to avenge himself against the men that conspired to destroy him, the newly free Edmond uses the treasure to forge a mysterious and powerful new identity: the Count of Monte Cristo.",
+    			_createdOn: 1614935055353,
+    			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
+    		},
+    		"143e5265-333e-4150-80e4-16b61de31aa0": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			title: "Pachinko",
+                cover: "https://www.pagesofhackney.co.uk/wp-content/uploads/2022/06/9781838930509.jpg",
+                author: "Min Jin Lee",
+                year: "2017",
+                pages: "560",
+                price: "$11.99",
+                description: "In the early 1900s, teenaged Sunja, the adored daughter of a crippled fisherman, falls for a wealthy stranger at the seashore near her home in Korea. He promises her the world, but when she discovers she is pregnant—and that her lover is married—she refuses to be bought. Instead, she accepts an offer of marriage from a gentle, sickly minister passing through on his way to Japan. But her decision to abandon her home, and to reject her son's powerful father, sets off a dramatic saga that will echo down through the generations.",
+    			_createdOn: 1614935181470,
+    			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
+    		},
+    		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			title: "1984",
+                cover: "https://prodimage.images-bn.com/pimages/9780452262935_p0_v5_s600x595.jpg",
+                author: "George Orwell",
+                year: "1949",
+                pages: "328",
+                price: "$12.99",
+    			description: "Winston Smith toes the Party line, rewriting history to satisfy the demands of the Ministry of Truth. With each lie he writes, Winston grows to hate the Party that seeks power for its own sake and persecutes those who dare to commit thoughtcrimes. But as he starts to think for himself, Winston can’t escape the fact that Big Brother is always watching...",
+    			_createdOn: 1614935268135,
+    			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
+    		},
+            "e1b30a20-011b-4cc7-a85c-0bc01a361c79": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "The Courage to Be Disliked",
+                cover: "https://litbooks.com.my/wp-content/uploads/2020/08/9781760630492.jpg",
+                author: "Ichiro Kishimi, Fumitake Koga",
+                year: "2019",
+                pages: "288",
+                price: "$23.00",
+                description: "The Courage to be Disliked shows you how to unlock the power within yourself to become your best and truest self, change your future and find lasting happiness. Using the theories of Alfred Adler, one of the three giants of 19th century psychology alongside Freud and Jung, the authors explain how we are all free to determine our own future free of the shackles of past experiences, doubts and the expectations of others. It's a philosophy that's profoundly liberating, allowing us to develop the courage to change, and to ignore the limitations that we and those around us can place on ourselves.",
+                _createdOn: 1721200517543,
+                _id: "e1b30a20-011b-4cc7-a85c-0bc01a361c79",
+            }
+    	},
     	likes: {
     	},
     	ideas: {
