@@ -6,10 +6,13 @@
 }
 
 #menu {
+    display: flex;
     padding: 20px;
 }
 
-#menu > li {
+.general > li,
+.guest > li,
+.user > li {
     display: inline-block;
     list-style: none;
     padding: 15px;
