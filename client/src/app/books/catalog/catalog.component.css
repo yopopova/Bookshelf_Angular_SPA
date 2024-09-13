@@ -28,36 +28,4 @@
     text-align: center;
     column-gap: 30px;
     margin-top: 50px;
-}
-
-#main-div > div > h1 {
-    font-size: 22px;
-    color: #E779ED;
-    margin-bottom: 10px;
-}
-
-#main-div > div > p {
-    color: #010048;
-}
-
-#main-div > div > p > span {
-    font-weight: bold;
-}
-
-#main-div > div > img {
-    width: 180px;
-    height: 260px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px #000000;
-}
-
-.details-btn {
-    margin-top: 10px;
-    border: none;
-    border-radius: 7px;
-    padding: 8px 15px;
-    background-color: #E779ED;
-    color: #ffffff;
-    text-transform: uppercase;
-    box-shadow: 0 0 5px #000000;
-}
+} 
