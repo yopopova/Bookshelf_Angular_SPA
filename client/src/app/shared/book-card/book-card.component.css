@@ -1,0 +1,31 @@
+h1 {
+    font-size: 22px;
+    color: #E779ED;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #010048;
+}
+
+p > span {
+    font-weight: bold;
+}
+
+img {
+    width: 180px;
+    height: 260px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px #000000;
+}
+
+.details-btn {
+    margin-top: 10px;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 15px;
+    background-color: #E779ED;
+    color: #ffffff;
+    text-transform: uppercase;
+    box-shadow: 0 0 5px #000000;
+}
