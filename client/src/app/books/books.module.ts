@@ -5,6 +5,7 @@ import { BooksRoutingModule } from './books-routing.module';
 
 import { CatalogComponent } from './catalog/catalog.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AddBookComponent } from './add-book/add-book.component';
   ],
   imports: [
     CommonModule,
-    BooksRoutingModule
+    BooksRoutingModule,
+    SharedModule
   ],
   exports: [
     CatalogComponent,

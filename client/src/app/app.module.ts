@@ -11,13 +11,14 @@ import { CoreModule } from './core/core.module';
 import { LayoutsModule } from './layouts/layouts.module';
 import { BooksModule } from './books/books.module';
 import { UserModule } from './user/user.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +26,7 @@ import { UserModule } from './user/user.module';
     LayoutsModule,
     BooksModule,
     UserModule,
+    SharedModule,
     AppRoutingModule,
     HttpClientModule
   ],
