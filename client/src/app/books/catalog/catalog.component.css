@@ -1,9 +1,9 @@
 #hero-image {
-    background-image: url('https://assets.aboutamazon.com/dims4/default/2760c62/2147483647/strip/true/crop/1919x1080+1+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fcb%2F3b%2Fcd5a2b1b47b0958509fc9f767d15%2Fbook-hero-1.jpg');
+    background-image: url('https://images.pexels.com/photos/775998/pexels-photo-775998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     height: 30vw;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,7 @@
     font-size: 3rem;
     text-transform: uppercase;
     color: #ffffff;
-    text-shadow: 0 0 20px #000000;
+    text-shadow: 1px 0 20px #000000;
 }
 
 #main-div {
