@@ -3,11 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CatalogComponent } from './catalog/catalog.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 
 const routes: Routes = [
-    {path: 'catalog', component: CatalogComponent},
-    {path: 'add-book', component: AddBookComponent}
+    {
+      path: 'catalog',
+      children: [
+        { path: '', pathMatch: 'full', component: CatalogComponent },
+        { path: ':bookId', component: BookDetailsComponent },
+      ],
+    },
+    { path: 'add-book', component: AddBookComponent }
 ];
 
 @NgModule({
