@@ -43,4 +43,5 @@ a {
 
 .log-in-out > a {
     background-color: #E779ED;
+    cursor: pointer;
 }
