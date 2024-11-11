@@ -6,6 +6,14 @@
 
 <main id="main-div">
     <div *ngFor="let book of books">
-        <app-book-card [book]="book" />
+        <!-- <app-book-card [book]="book" /> -->
+
+        <img src={{book.cover}} alt={{book.title}}>
+        <h1>{{book.title}}</h1>
+        <p><span>Author:</span> {{book.author}}</p>
+        <p><span>Price:</span> {{book.price}}</p>
+        <a routerLink="book._id">Details</a>
+
+        <!-- <button class="details-btn"><a routerLink="book._id">Details</a></button> -->
     </div>
 </main>
