@@ -20,7 +20,21 @@ export class ApiService {
     return this.http.get<Book>(`${apiUrl}/books/${id}`);
   }
 
-  
+  createBook(title: string, cover: string, author: string, year: string, pages: string, price: string, description: string) {
+    const { apiUrl } = environment;
+
+    const payload = {
+      title,
+      cover,
+      author,
+      year,
+      pages,
+      price,
+      description
+    }
+
+    return this.http.post<Book>(`${apiUrl}/books`, payload);
+  }
 
   getLatest() {
     const { apiUrl } = environment;
