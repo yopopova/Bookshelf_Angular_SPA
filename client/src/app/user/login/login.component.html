@@ -1,16 +1,35 @@
 <div id="main-div">
     <div id="form">
         <div id="heading">
-            <p>Login</p>
+            <p>Log in to your account:</p>
         </div>
     
-        <div class="input-fields">
-            <p>Log in to your account:</p>
-            <input type="email" placeholder="Email" #inputEmail>
-            <input type="password" placeholder="Password" #inputPassword>
-            <button (click)="login($event, inputEmail.value, inputPassword.value)" type="submit">Login</button>
+        <form class="input-fields" #form="ngForm" (ngSubmit)="login(form)">
+            <label>Email</label>
+            <input 
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            ngModel
+            #inputEmail="ngModel"
+            required>
+
+            
+
+            <label>Password</label>
+            <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            ngModel
+            #inputPassword="ngModel"
+            required>
+            <p class="error">Password is required!</p>
+
+            <button>Login</button>
+            <!-- (click)="login($event, inputEmail.value, inputPassword.value)" -->
 
             <p>New user? <a routerLink="/register">Create an account</a></p>
-        </div>
+        </form>
     </div>
 </div>
