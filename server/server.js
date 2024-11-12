@@ -1574,7 +1574,7 @@
             "e1b30a20-011b-4cc7-a85c-0bc01a361c79": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 title: "The Courage to Be Disliked",
-                cover: "https://litbooks.com.my/wp-content/uploads/2020/08/9781760630492.jpg",
+                cover: "https://dynamic.indigoimages.ca/v1/books/books/1982107022/1.jpg?width=810&maxHeight=810&quality=85",
                 author: "Ichiro Kishimi, Fumitake Koga",
                 year: "2019",
                 pages: "288",
