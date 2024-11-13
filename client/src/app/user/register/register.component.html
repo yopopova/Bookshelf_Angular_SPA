@@ -1,21 +1,22 @@
 <div id="main-div">
     <div id="form">
         <div id="heading">
-            <p>Registration</p>
+            <p>Create an account:</p>
         </div>
 
-        <div class="input-fields">
-            <p>Create an account:</p>
-            <input type="text" placeholder="First name">
-            <input type="text" placeholder="Last name">
-            <input type="url" placeholder="Photo">
-            <input type="text" placeholder="City">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Repeat password">
+        <form class="input-fields" [formGroup]="form" (ngSubmit)="register()">
+            <label>Username</label>
+            <input
+            type="text"
+            name="firstName"
+            placeholder="Enter your username"
+            formControlName="username"
+            />
+
+            
 
             <button type="submit">Create account</button>
             <p>Already have an account? <a routerLink="/login">Login</a></p>
-        </div>
+        </form>
     </div>
 </div>
