@@ -50,6 +50,11 @@
             formControlName="email"
             />
 
+            <ng-container *ngIf="form.get('email')?.touched">
+                <p class="error" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
+                <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">Email is not valid!</p>
+            </ng-container>
+
             <ng-container formGroupName="passGroup">
                 <label>Password</label>
                 <input
