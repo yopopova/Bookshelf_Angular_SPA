@@ -13,6 +13,11 @@
             formControlName="username"
             />
 
+            <ng-container *ngIf="form.get('username')?.touched">
+                <p class="error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
+                <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">Username must be at least 3 characters!</p>
+            </ng-container>
+
             <label>Photo</label>
             <input
             type="url"
