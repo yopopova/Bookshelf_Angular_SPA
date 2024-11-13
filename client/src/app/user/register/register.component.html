@@ -37,7 +37,23 @@
             formControlName="email"
             />
 
-            
+            <ng-container formGroupName="passGroup">
+                <label>Password</label>
+                <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                formControlName="password"
+                />
+
+                <label>Repeat password</label>
+                <input
+                type="password"
+                name="rePassword"
+                placeholder="Repeat your password"
+                formControlName="rePassword"
+                />
+            </ng-container>
 
             <button type="submit">Create account</button>
             <p>Already have an account? <a routerLink="/login">Login</a></p>
