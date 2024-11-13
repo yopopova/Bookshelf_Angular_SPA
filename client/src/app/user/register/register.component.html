@@ -38,6 +38,10 @@
             formControlName="city"
             />
 
+            <ng-container *ngIf="form.get('city')?.touched">
+                <p class="error" *ngIf="form.get('city')?.errors?.['required']">City is required!</p>
+            </ng-container>
+
             <label>Email</label>
             <input
             type="email"
