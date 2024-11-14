@@ -1322,12 +1322,14 @@
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
     			email: "peter@gmail.com",
     			username: "Peter",
+                city: "Sofia",
                 avatar: "https://img.freepik.com/premium-photo/portrait-smiling-young-man-looking-camera_33839-1731.jpg",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
     			email: "maria@gmail.com",
     			username: "Maria",
+                city: "Plovdiv",
                 avatar: "https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
@@ -1540,7 +1542,6 @@
     			title: "The Count of Monte Cristo",
                 cover: "https://images.penguinrandomhouse.com/cover/9780451529701",
                 author: "Alexandre Dumas",
-                year: "2005",
                 pages: "528",
                 price: "$6.95",
     			description: "In the post-Napoleonic era, a young sailor from Marseilles is poised to become captain of his own ship and marry his beloved. But jealous enemies provoke his arrest, condemning Edmond Dantès to lifelong imprisonment in the infamous Château d’If. There, his sole companion reveals his secret plan to escape, as well as the location of a trove of riches hidden on a remote island. Determined to avenge himself against the men that conspired to destroy him, the newly free Edmond uses the treasure to forge a mysterious and powerful new identity: the Count of Monte Cristo.",
@@ -1552,7 +1553,6 @@
     			title: "Pachinko",
                 cover: "https://www.pagesofhackney.co.uk/wp-content/uploads/2022/06/9781838930509.jpg",
                 author: "Min Jin Lee",
-                year: "2017",
                 pages: "560",
                 price: "$11.99",
                 description: "In the early 1900s, teenaged Sunja, the adored daughter of a crippled fisherman, falls for a wealthy stranger at the seashore near her home in Korea. He promises her the world, but when she discovers she is pregnant—and that her lover is married—she refuses to be bought. Instead, she accepts an offer of marriage from a gentle, sickly minister passing through on his way to Japan. But her decision to abandon her home, and to reject her son's powerful father, sets off a dramatic saga that will echo down through the generations.",
@@ -1564,7 +1564,6 @@
     			title: "1984",
                 cover: "https://prodimage.images-bn.com/pimages/9780452262935_p0_v5_s600x595.jpg",
                 author: "George Orwell",
-                year: "1949",
                 pages: "328",
                 price: "$12.99",
     			description: "Winston Smith toes the Party line, rewriting history to satisfy the demands of the Ministry of Truth. With each lie he writes, Winston grows to hate the Party that seeks power for its own sake and persecutes those who dare to commit thoughtcrimes. But as he starts to think for himself, Winston can’t escape the fact that Big Brother is always watching...",
@@ -1576,7 +1575,6 @@
                 title: "The Courage to Be Disliked",
                 cover: "https://dynamic.indigoimages.ca/v1/books/books/1982107022/1.jpg?width=810&maxHeight=810&quality=85",
                 author: "Ichiro Kishimi, Fumitake Koga",
-                year: "2019",
                 pages: "288",
                 price: "$23.00",
                 description: "The Courage to be Disliked shows you how to unlock the power within yourself to become your best and truest self, change your future and find lasting happiness. Using the theories of Alfred Adler, one of the three giants of 19th century psychology alongside Freud and Jung, the authors explain how we are all free to determine our own future free of the shackles of past experiences, doubts and the expectations of others. It's a philosophy that's profoundly liberating, allowing us to develop the courage to change, and to ignore the limitations that we and those around us can place on ourselves.",
