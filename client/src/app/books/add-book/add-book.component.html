@@ -4,16 +4,16 @@
             <p>Add Book</p>
         </div>
 
-        <form class="input-fields">
-            <input type="text" placeholder="Title" #inputTitle>
-            <input type="text" placeholder="Cover" #inputCover>
-            <input type="text" placeholder="Author" #inputAuthor>
-            <input type="text" placeholder="Year" #inputYear>
-            <input type="text" placeholder="Pages" #inputPages>
-            <input type="text" placeholder="Price" #inputPrice>
-            <textarea id="description" rows="4" cols="50" placeholder="Description" #inputDescription></textarea>
+        <form class="input-fields" #form="ngForm" ngSubmit="addBook(form)">
+            <label>Title</label>
+            <input
+            type="text"
+            placeholder="Enter book title"
+            #inputTitle="ngModel"
+            ngModel
+            />
 
-            <button type="submit" (click)="addBook($event, inputTitle.value, inputCover.value, inputAuthor.value, inputYear.value, inputPages.value, inputPrice.value, inputDescription.value)">Add</button>
+            
         </form>
     </div>
 </div>
