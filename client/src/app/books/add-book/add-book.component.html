@@ -44,7 +44,17 @@
             ngModel
             />
 
-            
+            <label>Description</label>
+            <textarea
+            id="description"
+            rows="4"
+            cols="50"
+            placeholder="Enter book description"
+            #inputDescription="ngModel"
+            ngModel
+            ></textarea>
+
+            <button type="submit" (click)="addBook(form)">Add</button>
         </form>
     </div>
 </div>
