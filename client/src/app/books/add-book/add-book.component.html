@@ -37,6 +37,11 @@
             minlength="3"
             />
 
+            <ng-container *ngIf="inputAuthor.touched">
+                <p class="error" *ngIf="inputAuthor?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="inputAuthor?.errors?.['minlength']">The author name must be at least 3 characters long!</p>
+            </ng-container>
+
             <label>Pages</label>
             <input
             type="text"
