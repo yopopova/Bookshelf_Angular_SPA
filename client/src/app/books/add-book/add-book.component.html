@@ -69,6 +69,11 @@
             minlength="10"
             ></textarea>
 
+            <ng-container *ngIf="inputDescription.touched">
+                <p class="error" *ngIf="inputDescription?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="inputDescription?.errors?.['minlength']">The description must be 10 characters long!</p>
+            </ng-container>
+
             <button type="submit" (click)="addBook(form)">Add</button>
         </form>
     </div>
