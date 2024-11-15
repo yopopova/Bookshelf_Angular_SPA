@@ -56,6 +56,10 @@
             required
             />
 
+            <ng-container *ngIf="inputPrice.touched">
+                <p class="error" *ngIf="inputPrice?.errors?.['required']">The field is required!</p>
+            </ng-container>
+
             <label>Description</label>
             <textarea
             id="description"
