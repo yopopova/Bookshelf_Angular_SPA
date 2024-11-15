@@ -42,9 +42,14 @@
             type="text"
             name="pages"
             placeholder="Enter book pages"
-            #inputPages
+            #inputPages="ngModel"
+            ngModel
             required
             />
+
+            <ng-container *ngIf="inputPages.touched">
+                <p class="error" *ngIf="inputPages?.errors?.['required']">The field is required!</p>
+            </ng-container>
 
             <label>Price</label>
             <input
