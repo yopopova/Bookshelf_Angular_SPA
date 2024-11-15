@@ -12,6 +12,8 @@
             placeholder="Enter book title"
             #inputTitle="ngModel"
             ngModel
+            required
+            minlength="3"
             />
 
             <label>Cover</label>
@@ -21,6 +23,7 @@
             placeholder="Enter book cover"
             #inputCover="ngModel"
             ngModel
+            required
             />
 
             <label>Author</label>
@@ -30,6 +33,8 @@
             placeholder="Enter book author"
             #inputAuthor="ngModel"
             ngModel
+            required
+            minlength="3"
             />
 
             <label>Pages</label>
@@ -38,6 +43,7 @@
             name="pages"
             placeholder="Enter book pages"
             #inputPages
+            required
             />
 
             <label>Price</label>
@@ -47,6 +53,7 @@
             placeholder="Enter book price"
             #inputPrice="ngModel"
             ngModel
+            required
             />
 
             <label>Description</label>
@@ -58,6 +65,8 @@
             placeholder="Enter book description"
             #inputDescription="ngModel"
             ngModel
+            required
+            minlength="10"
             ></textarea>
 
             <button type="submit" (click)="addBook(form)">Add</button>
