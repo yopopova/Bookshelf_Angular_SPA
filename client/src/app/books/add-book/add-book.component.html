@@ -26,6 +26,10 @@
             required
             />
 
+            <ng-container *ngIf="inputCover.touched">
+                <p class="error" *ngIf="inputCover?.errors?.['required']">The field is required!</p>
+            </ng-container>
+
             <label>Author</label>
             <input
             type="text"
