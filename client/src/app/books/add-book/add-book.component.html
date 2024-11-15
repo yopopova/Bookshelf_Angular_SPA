@@ -16,6 +16,11 @@
             minlength="3"
             />
 
+            <ng-container *ngIf="inputTitle.touched">
+                <p class="error" *ngIf="inputTitle?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="inputTitle?.errors?.['minlength']">The book name must be at least 3 characters long!</p>
+            </ng-container>
+
             <label>Cover</label>
             <input
             type="text"
