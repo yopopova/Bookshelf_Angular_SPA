@@ -47,6 +47,10 @@
             formControlName="photo"
             />
 
+            <ng-container *ngIf="form.get('photo')?.touched">
+                <p class="error" *ngIf="form.get('photo')?.errors?.['required']">Photo is required!</p>
+            </ng-container>
+
             <label>City</label>
             <input
             type="text"
