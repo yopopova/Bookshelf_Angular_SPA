@@ -1,19 +1,19 @@
 <div id="profile">
     <ng-container *ngIf="!showEditMode">
-        <h1>Welcome, Peter!</h1>
+        <h1>Welcome, {{profileDetails.username}}!</h1>
 
         <div id="user">
             <div id="user-img">
-                <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg" alt="profile-pic">
+                <img src="{{profileDetails.photo}}" alt="profile-pic">
             </div>
 
             <div id="user-info">
                 <h3><i class="fa-regular fa-user"></i> Full Name</h3>
-                <p>Peter Petrov</p>
+                <p>{{profileDetails.username}}</p>
                 <h3><i class="fa-solid fa-earth-americas"></i> Location</h3>
-                <p>Sofia</p>
+                <p>{{profileDetails.city}}</p>
                 <h3><i class="fa-regular fa-envelope"></i> Email</h3>
-                <p>peter@gmail.com</p>
+                <p>{{profileDetails.email}}</p>
             </div>
         </div>
 
@@ -32,6 +32,11 @@
             [value]="profileDetails.username"
             formControlName="username"
             />
+
+            <ng-container *ngIf="form.get('username')?.touched">
+                <p class="error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
+                <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">Username must be at least 3 characters!</p>
+            </ng-container>
 
             <label>Photo</label>
             <input
