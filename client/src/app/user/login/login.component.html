@@ -12,9 +12,14 @@
             placeholder="Enter your email"
             ngModel
             #inputEmail="ngModel"
-            required>
+            required
+            [appEmail]="domains"
+            />
 
-            
+            <ng-container *ngIf="inputEmail.touched">
+                <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+                <p class="error" *ngIf="inputEmail.errors?.['emailValidator']">Email is not valid!</p>
+            </ng-container>
 
             <label>Password</label>
             <input
@@ -23,12 +28,13 @@
             placeholder="Enter your password"
             ngModel
             #inputPassword="ngModel"
-            required>
-            <p class="error">Password is required!</p>
+            required
+            minlength="4"
+            />
+
+            
 
             <button>Login</button>
-            <!-- (click)="login($event, inputEmail.value, inputPassword.value)" -->
-
             <p>New user? <a routerLink="/register">Create an account</a></p>
         </form>
     </div>
