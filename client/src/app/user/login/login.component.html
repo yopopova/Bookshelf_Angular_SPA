@@ -32,7 +32,10 @@
             minlength="4"
             />
 
-            
+            <ng-container *ngIf="inputPassword.touched">
+                <p class="error" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
+                <p class="error" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 4 characters!</p>
+            </ng-container>
 
             <button>Login</button>
             <p>New user? <a routerLink="/register">Create an account</a></p>
