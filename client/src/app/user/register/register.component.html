@@ -71,6 +71,14 @@
                 placeholder="Repeat your password"
                 formControlName="rePassword"
                 />
+
+                <ng-container *ngIf="form.get('passGroup')?.get('rePassword')?.touched">
+                    <p class="error" 
+                        *ngIf="form.get('passGroup')?.errors?.['matchPasswordsValidator'] || 
+                        form.get('passGroup')?.get('rePassword')?.errors?.['required']">
+                        Passwords do not match!
+                    </p>
+                </ng-container>
             </ng-container>
 
             <button type="submit">Create account</button>
