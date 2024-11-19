@@ -15,7 +15,7 @@ export class ProfileComponent {
 
   profileDetails: ProfileDetails = {
     username: 'Ivan',
-    photo: 'link',
+    photo: 'https://png.pngtree.com/png-vector/20230903/ourmid/pngtree-man-avatar-isolated-png-image_9935819.png',
     city: 'Vidin',
     email: 'ivan@gmail.com',
   };
@@ -39,6 +39,11 @@ export class ProfileComponent {
     }
 
     this.profileDetails = this.form.value as ProfileDetails;
+    this.onToggle();
+  }
+
+  onCancel(ev: Event) {
+    ev.preventDefault();
     this.onToggle();
   }
 }
