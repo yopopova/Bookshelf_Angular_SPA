@@ -24,8 +24,12 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    return this.http.post('/users/login', { email, password });
+    return this.http.post<UserForAuth>('/users/login', { email, password });
   };
+
+  register(username: string, photo: string, city: string, email: string, password: string, rePassword: string) {
+    return this.http.post<UserForAuth>('/users/register', {username, photo, city, email, password, rePassword});
+  }
 
   logout() {
     this.user = undefined;
