@@ -29,7 +29,10 @@ export class UserService {
     return this.http.post<UserForAuth>(`${apiUrl}/users/login`, { email, password });
   };
 
-  
+  register(username: string, photo: string, city: string, email: string, password: string, rePassword: string) {
+    const { apiUrl } = environment;
+    return this.http.post<UserForAuth>(`${apiUrl}/users/register`, { username, photo, city, email, password, rePassword });
+  }
 
   logout() {
     this.user = undefined;
