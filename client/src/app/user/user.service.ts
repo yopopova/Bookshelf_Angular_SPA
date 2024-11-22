@@ -39,5 +39,15 @@ export class UserService implements OnDestroy {
     );
   };
 
+  register(username: string, photo: string, city: string, email: string, password: string, rePassword: string) {
+    const { apiUrl } = environment;
+
+    return this.http.post<UserForAuth>(`${apiUrl}/users/register`, { username, photo, city, email, password, rePassword }).pipe(
+      tap((user) => {
+        this.user$$.next(user);
+      })
+    );
+  }
+
   
 }
