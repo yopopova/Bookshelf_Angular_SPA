@@ -12,13 +12,15 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { BooksModule } from './books/books.module';
 import { UserModule } from './user/user.module';
 import { SharedModule } from './shared/shared.module';
-
+import { appInterceptorProvider } from './app.interceptor';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
+    AuthenticateComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
