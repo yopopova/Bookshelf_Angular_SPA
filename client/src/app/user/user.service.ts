@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { UserForAuth } from '../types/user';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -24,12 +25,11 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    return this.http.post<UserForAuth>('/users/login', { email, password });
+    const { apiUrl } = environment;
+    return this.http.post<UserForAuth>(`${apiUrl}/users/login`, { email, password });
   };
 
-  register(username: string, photo: string, city: string, email: string, password: string, rePassword: string) {
-    return this.http.post<UserForAuth>('/users/register', {username, photo, city, email, password, rePassword});
-  }
+  
 
   logout() {
     this.user = undefined;
