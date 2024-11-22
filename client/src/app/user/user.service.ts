@@ -49,5 +49,17 @@ export class UserService implements OnDestroy {
     );
   }
 
-  
+  logout() {
+    // this.user = undefined;
+    // localStorage.removeItem(this.USER_KEY);
+
+    const { apiUrl } = environment;
+
+    return this.http.post(`${apiUrl}/users/logout`, {})
+      .pipe(tap(() => this.user$$.next(undefined)));
+  }
+
+  ngOnDestroy(): void {
+    this.userSubscription.unsubscribe();
+  }
 }
