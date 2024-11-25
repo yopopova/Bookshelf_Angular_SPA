@@ -10,25 +10,11 @@
 
 <main id="main-div">
     <h1>Recently Added</h1>
-    <div>
-        <img src="https://m.media-amazon.com/images/I/81m-yfhwlfL._AC_UF1000,1000_QL80_.jpg" alt="1984">
-        <h1>1984</h1>
-        <p><span>Author:</span> George Orwell</p>
-        <p><span>Price:</span> $13.00</p>
-        <button class="details-btn">Details</button>
-    </div>
-    <div>
-        <img src="https://cdn.waterstones.com/bookjackets/large/9781/8389/9781838930509.jpg" alt="Pachinko">
-        <h1>Pachinko</h1>
-        <p><span>Author:</span> Min Jin Lee</p>
-        <p><span>Price:</span> $15.00</p>
-        <button class="details-btn">Details</button>
-    </div>
-    <div>
-        <img src="https://images.penguinrandomhouse.com/cover/9780451529701" alt="The Count of Monte Cristo">
-        <h1>The Count of Monte Cristo</h1>
-        <p><span>Author:</span> Alexandre Dumas</p>
-        <p><span>Price:</span> $16.00</p>
+    <div *ngFor="let book of latestBooks">
+        <img src={{book.cover}} alt={{book.title}}>
+        <h1>{{book.title}}</h1>
+        <p><span>Author:</span> {{book.author}}</p>
+        <p><span>Price:</span> {{book.price}}</p>
         <button class="details-btn">Details</button>
     </div>
 </main>
