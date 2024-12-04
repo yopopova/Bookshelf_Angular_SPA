@@ -1,1 +1,28 @@
-<p>book-details works!</p>
+<div id="book-details">
+    <h1>{{book.title}}</h1>
+
+    <div id="book">
+        <div id="book-img">
+            <img src="{{book.cover}}" alt="{{book.title}}">
+        </div>
+
+        <div id="book-info">
+            <h3>Author(s)</h3>
+            <p>{{book.author}}</p>
+            <h3>Pages</h3>
+            <p>{{book.pages}}</p>
+            <h3>Price</h3>
+            <p>{{book.price}}</p>
+            <h3>Description</h3>
+            <p>{{book.description}}</p>
+
+            <h3>Likes</h3>
+            <p>{{book.likes.length}}</p>
+        </div>
+    </div>
+
+    <div id="btns">
+        <button class="btn-edit">Edit</button>
+        <button class="btn-delete">Delete</button>
+    </div>
+</div>
