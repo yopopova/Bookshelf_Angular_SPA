@@ -1,5 +1,5 @@
 <div id="book-details">
-    <h1>{{book.title}}</h1>
+    <h1>{{book.title | uppercase}}</h1>
 
     <div id="book">
         <div id="book-img">
@@ -16,8 +16,10 @@
             <h3>Description</h3>
             <p>{{book.description}}</p>
 
-            <h3>Likes</h3>
-            <p>{{book.likes.length}}</p>
+            <!-- <h3>Likes</h3>
+            <p>{{book.likes.length}}</p> -->
+
+            <button type="button" class="btn-like">Like <span>{{book.likes.length}}</span></button>
         </div>
     </div>
 
