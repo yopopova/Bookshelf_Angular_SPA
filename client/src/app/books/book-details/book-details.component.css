@@ -40,10 +40,6 @@ h1 {
     margin: 2px 0 18px 0;
 }
 
-/* .btn-like {
-
-} */
-
 #btns {
     display: flex;
     gap: 30px;
@@ -76,61 +72,4 @@ h1 {
 .btn-like,
 .btn-delete {
     background-color: #E779ED;
-}
-
-/* EDIT PROFILE */
-
-form {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border-radius: 30px;
-    padding: 40px 70px;
-    gap: 30px;
-    box-shadow: 0 0 20px #C8C8C8;
-    max-width: 35%;
-}
-
-.input-fields {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-}
-
-.input-fields > p {
-    color: #010048;
-}
-
-.input-fields > p > a {
-    text-decoration: none;
-    color: #E779ED;
-    font-weight: bold;
-}
-
-.input-fields > input {
-    border: 1px solid #010048;
-    border-radius: 30px;
-    padding: 13px;
-}
-
-.input-fields > button {
-    background-color: #E779ED;
-    color: #ffffff;
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    padding: 10px 30px;
-    box-shadow: 0 0 8px #808080;
-    cursor: pointer;
-    margin: 20px;
-}
-
-.input-fields .error {
-    background-color: #e3242b;
-    color: #ffffff;
-    font-size: 13px;
-    font-style: italic;
-    border-radius: 50px;
-    padding: 5px;
 }
