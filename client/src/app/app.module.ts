@@ -29,10 +29,10 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
     BooksModule,
     UserModule,
     SharedModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
