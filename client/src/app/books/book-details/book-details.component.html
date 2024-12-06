@@ -19,11 +19,12 @@
             <!-- <h3>Likes</h3>
             <p>{{book.likes.length}}</p> -->
 
-            <button type="button" class="btn-like">Like <span>{{book.likes.length}}</span></button>
+            <button *ngIf="isLoggedIn && !isLiked(book)" type="button" class="btn-like">Like: {{book.likes.length}}</button>
+            <button *ngIf="isLoggedIn && isLiked(book)" type="button" class="btn-dislike">Dislike: {{book.likes.length}}</button>
         </div>
     </div>
 
-    <div id="btns">
+    <div *ngIf="isLoggedIn && isOwner" id="btns">
         <button class="btn-edit">Edit</button>
         <button class="btn-delete">Delete</button>
     </div>
