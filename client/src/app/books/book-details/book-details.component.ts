@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Book } from 'src/app/types/book';
 import { ApiService } from 'src/app/api.service';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-book-details',
@@ -11,8 +12,17 @@ import { ApiService } from 'src/app/api.service';
 })
 export class BookDetailsComponent implements OnInit {
   book = {} as Book;
+  isOwner: boolean = false;
 
-  constructor(private apiService: ApiService, private activeRoute: ActivatedRoute) {}
+  constructor(private apiService: ApiService, private userService: UserService, private activeRoute: ActivatedRoute) {}
+
+  get isLoggedIn(): boolean {
+    return this.userService.isLogged;
+  }
+
+  get userId(): string {
+    return this.userService.user?._id || '';
+  }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((data) => {
@@ -20,8 +30,19 @@ export class BookDetailsComponent implements OnInit {
 
       this.apiService.getSingleBook(id).subscribe((book: Book) => {
         this.book = book;
-        // console.log(book);
+
+        if (this.userId === book._ownerId) {
+          this.isOwner = true;
+        }
+
+        // console.log(this.userId);
+        // console.log(book._ownerId);
       });
     });
+  }
+
+  isLiked(book: Book) {
+    const isLikedUser = book.likes.find((like) => like === this.userService.user?._id);    
+    return !!isLikedUser;
   }
 }
