@@ -8,6 +8,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { SharedModule } from '../shared/shared.module';
+import { UserModule } from '../user/user.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     BooksRoutingModule,
+    UserModule,
     SharedModule,
     FormsModule,
   ],
@@ -26,4 +28,4 @@ import { SharedModule } from '../shared/shared.module';
     AddBookComponent
   ]
 })
-export class BooksModule { }
+export class BooksModule {}
