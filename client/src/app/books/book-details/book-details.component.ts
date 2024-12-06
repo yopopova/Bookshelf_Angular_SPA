@@ -41,6 +41,15 @@ export class BookDetailsComponent implements OnInit {
     });
   }
 
+  likeBook() {
+    this.book.likes.push(this.userId);
+  }
+
+  dislikeBook() {
+    let currentIdIndex = this.book.likes.indexOf(this.userId);
+    this.book.likes.splice(currentIdIndex, 1);
+  }
+
   isLiked(book: Book) {
     const isLikedUser = book.likes.find((like) => like === this.userService.user?._id);    
     return !!isLikedUser;

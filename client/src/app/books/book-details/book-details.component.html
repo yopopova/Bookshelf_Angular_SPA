@@ -19,8 +19,8 @@
             <!-- <h3>Likes</h3>
             <p>{{book.likes.length}}</p> -->
 
-            <button *ngIf="isLoggedIn && !isLiked(book)" type="button" class="btn-like">Like: {{book.likes.length}}</button>
-            <button *ngIf="isLoggedIn && isLiked(book)" type="button" class="btn-dislike">Dislike: {{book.likes.length}}</button>
+            <button *ngIf="isLoggedIn && !isLiked(book)" type="button" class="btn-like" (click)="likeBook()">Like: {{book.likes.length}}</button>
+            <button *ngIf="isLoggedIn && isLiked(book)" type="button" class="btn-dislike" (click)="dislikeBook()">Dislike: {{book.likes.length}}</button>
         </div>
     </div>
 
