@@ -1320,23 +1320,26 @@
     var protectedData = {
     	users: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
+                _id: "35c62d76-8152-4626-8712-eeb96381bea8",
     			email: "peter@gmail.com",
     			username: "Peter",
                 city: "Sofia",
-                avatar: "https://img.freepik.com/premium-photo/portrait-smiling-young-man-looking-camera_33839-1731.jpg",
+                photo: "https://img.freepik.com/premium-photo/portrait-smiling-young-man-looking-camera_33839-1731.jpg",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
+                _id: "847ec027-f659-4086-8032-5173e2f9c93a",
     			email: "maria@gmail.com",
     			username: "Maria",
                 city: "Plovdiv",
-                avatar: "https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg",
+                photo: "https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
+                _id: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
     			email: "admin@abv.bg",
     			username: "Admin",
-                avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                photo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
     		}
     	},
@@ -1539,6 +1542,7 @@
         books: {
     		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                likes: ["60f0cf0b-34b0-4abd-9769-8c42f830dffc"],
     			title: "The Count of Monte Cristo",
                 cover: "https://images.penguinrandomhouse.com/cover/9780451529701",
                 author: "Alexandre Dumas",
@@ -1550,6 +1554,7 @@
     		},
     		"143e5265-333e-4150-80e4-16b61de31aa0": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                likes: [],
     			title: "Pachinko",
                 cover: "https://www.pagesofhackney.co.uk/wp-content/uploads/2022/06/9781838930509.jpg",
                 author: "Min Jin Lee",
@@ -1561,6 +1566,7 @@
     		},
     		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                likes: ["60f0cf0b-34b0-4abd-9769-8c42f830dffc"],
     			title: "1984",
                 cover: "https://prodimage.images-bn.com/pimages/9780452262935_p0_v5_s600x595.jpg",
                 author: "George Orwell",
@@ -1572,6 +1578,7 @@
     		},
             "e1b30a20-011b-4cc7-a85c-0bc01a361c79": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                likes: [],
                 title: "The Courage to Be Disliked",
                 cover: "https://dynamic.indigoimages.ca/v1/books/books/1982107022/1.jpg?width=810&maxHeight=810&quality=85",
                 author: "Ichiro Kishimi, Fumitake Koga",
