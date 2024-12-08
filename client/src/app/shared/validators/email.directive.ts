@@ -14,7 +14,7 @@ import { emailValidator } from '../utils/email-validator';
   ]
 })
 export class EmailDirective implements Validator {
-  @Input() appEmail: string[] = [];
+  @Input() appEmail: string[] = []; // 'appEmail' is the name of the directive, which we use into the HTML.
   
   constructor() {}
 
