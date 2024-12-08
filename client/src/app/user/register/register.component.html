@@ -81,7 +81,7 @@
                 </ng-container>
             </ng-container>
 
-            <button type="submit">Create account</button>
+            <button type="submit" [disabled]="form.invalid" [style]="{ backgroundColor: form.invalid ? 'gray' : '#E779ED' }">Create account</button>
             <p>Already have an account? <a routerLink="/login">Login</a></p>
         </form>
     </div>

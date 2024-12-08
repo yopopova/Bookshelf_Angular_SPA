@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormBuilder, Validators } from '@angular/forms';
 
 import { EMAIL_DOMAINS } from 'src/app/constants';
 import { emailValidator } from 'src/app/shared/utils/email-validator';
