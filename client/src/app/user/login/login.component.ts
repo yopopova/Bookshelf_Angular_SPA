@@ -12,10 +12,11 @@ import { EMAIL_DOMAINS } from 'src/app/constants';
 })
 export class LoginComponent {
   domains = EMAIL_DOMAINS;
+
   constructor(private userService: UserService, private router: Router) {}
 
   login(form: NgForm) {
-    console.log(form.value);
+    // console.log(form.value); // This shows form input names with their values.
 
     if (form.invalid) {
       return;
