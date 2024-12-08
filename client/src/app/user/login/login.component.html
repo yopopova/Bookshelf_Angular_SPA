@@ -37,7 +37,7 @@
                 <p class="error" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 4 characters!</p>
             </ng-container>
 
-            <button>Login</button>
+            <button [disabled]="form.invalid" [style]="{ backgroundColor: form.invalid ? 'gray' : '#E779ED' }">Login</button>
             <p>New user? <a routerLink="/register">Create an account</a></p>
         </form>
     </div>
