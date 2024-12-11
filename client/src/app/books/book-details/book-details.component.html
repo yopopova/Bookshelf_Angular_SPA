@@ -16,16 +16,13 @@
             <h3>Description</h3>
             <p>{{book.description}}</p>
 
-            <!-- <h3>Likes</h3>
-            <p>{{book.likes.length}}</p> -->
-
-            <button *ngIf="isLoggedIn && !isLiked(book)" type="button" class="btn-like" (click)="likeBook()">Like: {{book.likes.length}}</button>
-            <button *ngIf="isLoggedIn && isLiked(book)" type="button" class="btn-dislike" (click)="dislikeBook()">Dislike: {{book.likes.length}}</button>
+            <!-- <button *ngIf="isLoggedIn && !isLiked(book)" type="button" class="btn-like" (click)="likeBook()">Like: {{book.likes.length}}</button> -->
+            <!-- <button *ngIf="isLoggedIn && isLiked(book)" type="button" class="btn-dislike" (click)="dislikeBook()">Dislike: {{book.likes.length}}</button> -->
         </div>
     </div>
 
     <div *ngIf="isLoggedIn && isOwner" id="btns">
-        <button class="btn-edit">Edit</button>
+        <button class="btn-edit" routerLink="/catalog/{{book._id}}/edit">Edit</button>
         <button class="btn-delete">Delete</button>
     </div>
 </div>

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatalogComponent } from './catalog/catalog.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 import { AuthActivate } from '../guards/auth.activate';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
       children: [
         { path: '', pathMatch: 'full', component: CatalogComponent },
         { path: ':bookId', component: BookDetailsComponent },
+        { path: ':bookId/edit', component: EditBookComponent }
       ],
     },
     { path: 'add-book', component: AddBookComponent, canActivate: [AuthActivate] }  
