@@ -4,14 +4,14 @@
             <p>Add Book</p>
         </div>
 
-        <form class="input-fields" #form="ngForm" ngSubmit="addBook(form)">
+        <form class="input-fields" #form="ngForm" (ngSubmit)="addBook(form)">
             <label>Title</label>
             <input
             type="text"
             name="title"
             placeholder="Enter book title"
-            #inputTitle="ngModel"
             ngModel
+            #inputTitle="ngModel"
             required
             minlength="3"
             />
@@ -26,8 +26,8 @@
             type="text"
             name="cover"
             placeholder="Enter book cover"
-            #inputCover="ngModel"
             ngModel
+            #inputCover="ngModel"
             required
             />
 
@@ -40,8 +40,8 @@
             type="text"
             name="author"
             placeholder="Enter book author"
-            #inputAuthor="ngModel"
             ngModel
+            #inputAuthor="ngModel"
             required
             minlength="3"
             />
@@ -56,8 +56,8 @@
             type="text"
             name="pages"
             placeholder="Enter book pages"
-            #inputPages="ngModel"
             ngModel
+            #inputPages="ngModel"
             required
             />
 
@@ -70,8 +70,8 @@
             type="text"
             name="price"
             placeholder="Enter book price"
-            #inputPrice="ngModel"
             ngModel
+            #inputPrice="ngModel"
             required
             />
 
@@ -86,18 +86,18 @@
             rows="4"
             cols="50"
             placeholder="Enter book description"
-            #inputDescription="ngModel"
             ngModel
+            #textareaDescription="ngModel"
             required
             minlength="10"
             ></textarea>
 
-            <ng-container *ngIf="inputDescription.touched">
-                <p class="error" *ngIf="inputDescription?.errors?.['required']">The field is required!</p>
-                <p class="error" *ngIf="inputDescription?.errors?.['minlength']">The description must be 10 characters long!</p>
+            <ng-container *ngIf="textareaDescription.touched">
+                <p class="error" *ngIf="textareaDescription?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="textareaDescription?.errors?.['minlength']">The description must be at least 10 characters long!</p>
             </ng-container>
 
-            <button type="submit" (click)="addBook(form)">Add</button>
+            <button type="submit">Add</button>
         </form>
     </div>
 </div>

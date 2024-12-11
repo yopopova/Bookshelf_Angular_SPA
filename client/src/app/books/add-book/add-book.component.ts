@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
-// import { ApiService } from 'src/app/api.service';
-// import { Book } from 'src/app/types/book';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-add-book',
@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookComponent {
-  // constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   addBook(form: NgForm) {
     if (form.invalid) {
@@ -18,5 +18,11 @@ export class AddBookComponent {
     }
 
     console.log(form.value);
+
+    const { title, cover, author, pages, price, description } = form.value;
+
+    this.apiService.createBook(title, cover, author, pages, price, description).subscribe(() => {
+      this.router.navigate(['/catalog']);
+    });
   }
 }
