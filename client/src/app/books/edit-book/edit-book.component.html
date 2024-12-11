@@ -1,0 +1,104 @@
+<div id="main-div">
+    <div id="form">
+        <div id="heading">
+            <p>Edit Book:</p>
+        </div>
+
+        <!-- (ngSubmit)="addBook(form)" -->
+        <form class="input-fields" #form="ngForm">
+            <label>Title</label>
+            <input
+            type="text"
+            name="title"
+            placeholder="Enter book title"
+            ngModel
+            #inputTitle="ngModel"
+            required
+            minlength="3"
+            />
+
+            <ng-container *ngIf="inputTitle.touched">
+                <p class="error" *ngIf="inputTitle?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="inputTitle?.errors?.['minlength']">The book name must be at least 3 characters long!</p>
+            </ng-container>
+
+            <label>Cover</label>
+            <input
+            type="text"
+            name="cover"
+            placeholder="Enter book cover"
+            ngModel
+            #inputCover="ngModel"
+            required
+            />
+
+            <ng-container *ngIf="inputCover.touched">
+                <p class="error" *ngIf="inputCover?.errors?.['required']">The field is required!</p>
+            </ng-container>
+
+            <label>Author</label>
+            <input
+            type="text"
+            name="author"
+            placeholder="Enter book author"
+            ngModel
+            #inputAuthor="ngModel"
+            required
+            minlength="3"
+            />
+
+            <ng-container *ngIf="inputAuthor.touched">
+                <p class="error" *ngIf="inputAuthor?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="inputAuthor?.errors?.['minlength']">The author name must be at least 3 characters long!</p>
+            </ng-container>
+
+            <label>Pages</label>
+            <input
+            type="text"
+            name="pages"
+            placeholder="Enter book pages"
+            ngModel
+            #inputPages="ngModel"
+            required
+            />
+
+            <ng-container *ngIf="inputPages.touched">
+                <p class="error" *ngIf="inputPages?.errors?.['required']">The field is required!</p>
+            </ng-container>
+
+            <label>Price</label>
+            <input
+            type="text"
+            name="price"
+            placeholder="Enter book price"
+            ngModel
+            #inputPrice="ngModel"
+            required
+            />
+
+            <ng-container *ngIf="inputPrice.touched">
+                <p class="error" *ngIf="inputPrice?.errors?.['required']">The field is required!</p>
+            </ng-container>
+
+            <label>Description</label>
+            <textarea
+            id="description"
+            name="description"
+            rows="4"
+            cols="50"
+            placeholder="Enter book description"
+            ngModel
+            #textareaDescription="ngModel"
+            required
+            minlength="10"
+            ></textarea>
+
+            <ng-container *ngIf="textareaDescription.touched">
+                <p class="error" *ngIf="textareaDescription?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="textareaDescription?.errors?.['minlength']">The description must be at least 10 characters long!</p>
+            </ng-container>
+
+            <button type="submit">Edit</button>
+        </form>
+    </div>
+</div>
