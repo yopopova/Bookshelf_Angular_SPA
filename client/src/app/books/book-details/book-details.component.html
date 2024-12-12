@@ -23,6 +23,6 @@
 
     <div *ngIf="isLoggedIn && isOwner" id="btns">
         <button class="btn-edit" routerLink="/catalog/{{book._id}}/edit">Edit</button>
-        <button class="btn-delete">Delete</button>
+        <button class="btn-delete" (click)="deleteBook()">Delete</button>
     </div>
 </div>

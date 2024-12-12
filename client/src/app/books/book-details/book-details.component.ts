@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Book } from 'src/app/types/book';
 import { ApiService } from 'src/app/api.service';
@@ -14,7 +14,7 @@ export class BookDetailsComponent implements OnInit {
   book = {} as Book;
   isOwner: boolean = false;
 
-  constructor(private apiService: ApiService, private userService: UserService, private activeRoute: ActivatedRoute) {}
+  constructor(private apiService: ApiService, private userService: UserService, private router: Router, private activeRoute: ActivatedRoute) {}
 
   get isLoggedIn(): boolean {
     return this.userService.isLogged;
@@ -38,6 +38,14 @@ export class BookDetailsComponent implements OnInit {
         // console.log(this.userId);
         // console.log(book._ownerId);
       });
+    });
+  }
+
+  deleteBook() {
+    const bookId = this.book._id;
+
+    this.apiService.removeBook(bookId).subscribe(() => {
+      this.router.navigate(['/catalog']);
     });
   }
 
