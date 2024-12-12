@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BooksRoutingModule } from './books-routing.module';
 
@@ -9,12 +9,14 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { UserModule } from '../user/user.module';
+import { EditBookComponent } from './edit-book/edit-book.component';
 
 @NgModule({
   declarations: [
     CatalogComponent,
     AddBookComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    EditBookComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { UserModule } from '../user/user.module';
     UserModule,
     SharedModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     CatalogComponent,
