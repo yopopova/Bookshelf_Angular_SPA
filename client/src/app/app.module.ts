@@ -14,6 +14,7 @@ import { UserModule } from './user/user.module';
 import { SharedModule } from './shared/shared.module';
 import { appInterceptorProvider } from './app.interceptor';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { authInterceptorProvider } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [appInterceptorProvider],
+  providers: [appInterceptorProvider, authInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
