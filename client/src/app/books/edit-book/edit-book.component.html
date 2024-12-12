@@ -4,22 +4,19 @@
             <p>Edit Book:</p>
         </div>
 
-        <!-- (ngSubmit)="addBook(form)" -->
-        <form class="input-fields" #form="ngForm">
+        <form class="input-fields" [formGroup]="form" (ngSubmit)="editBook()">
             <label>Title</label>
             <input
             type="text"
             name="title"
             placeholder="Enter book title"
-            ngModel
-            #inputTitle="ngModel"
-            required
-            minlength="3"
+            [value]="bookDetails.title"
+            formControlName="title"
             />
 
-            <ng-container *ngIf="inputTitle.touched">
-                <p class="error" *ngIf="inputTitle?.errors?.['required']">The field is required!</p>
-                <p class="error" *ngIf="inputTitle?.errors?.['minlength']">The book name must be at least 3 characters long!</p>
+            <ng-container *ngIf="form.get('title')?.touched">
+                <p class="error" *ngIf="form.get('title')?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="form.get('title')?.errors?.['minlength']">The book name must be at least 3 characters long!</p>
             </ng-container>
 
             <label>Cover</label>
@@ -27,13 +24,12 @@
             type="text"
             name="cover"
             placeholder="Enter book cover"
-            ngModel
-            #inputCover="ngModel"
-            required
+            [value]="bookDetails.cover"
+            formControlName="cover"
             />
 
-            <ng-container *ngIf="inputCover.touched">
-                <p class="error" *ngIf="inputCover?.errors?.['required']">The field is required!</p>
+            <ng-container *ngIf="form.get('cover')?.touched">
+                <p class="error" *ngIf="form.get('cover')?.errors?.['required']">The field is required!</p>
             </ng-container>
 
             <label>Author</label>
@@ -41,15 +37,13 @@
             type="text"
             name="author"
             placeholder="Enter book author"
-            ngModel
-            #inputAuthor="ngModel"
-            required
-            minlength="3"
+            [value]="bookDetails.author"
+            formControlName="author"
             />
 
-            <ng-container *ngIf="inputAuthor.touched">
-                <p class="error" *ngIf="inputAuthor?.errors?.['required']">The field is required!</p>
-                <p class="error" *ngIf="inputAuthor?.errors?.['minlength']">The author name must be at least 3 characters long!</p>
+            <ng-container *ngIf="form.get('author')?.touched">
+                <p class="error" *ngIf="form.get('author')?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="form.get('author')?.errors?.['minlength']">The author name must be at least 3 characters long!</p>
             </ng-container>
 
             <label>Pages</label>
@@ -57,13 +51,12 @@
             type="text"
             name="pages"
             placeholder="Enter book pages"
-            ngModel
-            #inputPages="ngModel"
-            required
+            [value]="bookDetails.pages"
+            formControlName="pages"
             />
 
-            <ng-container *ngIf="inputPages.touched">
-                <p class="error" *ngIf="inputPages?.errors?.['required']">The field is required!</p>
+            <ng-container *ngIf="form.get('pages')?.touched">
+                <p class="error" *ngIf="form.get('pages')?.errors?.['required']">The field is required!</p>
             </ng-container>
 
             <label>Price</label>
@@ -71,13 +64,12 @@
             type="text"
             name="price"
             placeholder="Enter book price"
-            ngModel
-            #inputPrice="ngModel"
-            required
+            [value]="bookDetails.price"
+            formControlName="price"
             />
 
-            <ng-container *ngIf="inputPrice.touched">
-                <p class="error" *ngIf="inputPrice?.errors?.['required']">The field is required!</p>
+            <ng-container *ngIf="form.get('price')?.touched">
+                <p class="error" *ngIf="form.get('price')?.errors?.['required']">The field is required!</p>
             </ng-container>
 
             <label>Description</label>
@@ -87,15 +79,13 @@
             rows="4"
             cols="50"
             placeholder="Enter book description"
-            ngModel
-            #textareaDescription="ngModel"
-            required
-            minlength="10"
+            [value]="bookDetails.description"
+            formControlName="description"
             ></textarea>
 
-            <ng-container *ngIf="textareaDescription.touched">
-                <p class="error" *ngIf="textareaDescription?.errors?.['required']">The field is required!</p>
-                <p class="error" *ngIf="textareaDescription?.errors?.['minlength']">The description must be at least 10 characters long!</p>
+            <ng-container *ngIf="form.get('description')?.touched">
+                <p class="error" *ngIf="form.get('description')?.errors?.['required']">The field is required!</p>
+                <p class="error" *ngIf="form.get('description')?.errors?.['minlength']">The description must be at least 10 characters long!</p>
             </ng-container>
 
             <button type="submit">Edit</button>
