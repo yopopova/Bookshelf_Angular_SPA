@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { UserService } from 'src/app/user/user.service';
 
 @Component({
@@ -15,7 +16,9 @@ export class HeaderComponent {
     }
 
     logout() {
-      this.userService.logout();
-      this.router.navigate(['/home']);
+      this.userService.logout().subscribe({
+        next: () => this.router.navigate(['/login']),
+        error: () => this.router.navigate(['/login']),
+      });
     }
-}
+} 
