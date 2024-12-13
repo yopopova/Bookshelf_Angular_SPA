@@ -89,3 +89,12 @@
     box-shadow: 0 0 8px #808080;
     cursor: pointer;
 }
+
+.no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    padding: 70px;
+}

@@ -17,4 +17,8 @@
         <p><span>Price:</span> {{book.price}}</p>
         <button class="details-btn" routerLink="/catalog/{{book._id}}">Details</button>
     </div>
+
+    <div class="no-content" *ngIf="latestBooks.length === 0">
+        <p>There are no movies added yet.</p>
+    </div>
 </main>

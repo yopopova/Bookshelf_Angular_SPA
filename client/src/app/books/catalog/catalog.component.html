@@ -14,4 +14,8 @@
 
         <a class="details-btn" routerLink={{book._id}}>Details</a>
     </div>
+
+    <div class="no-content" *ngIf="books.length === 0">
+        <p>There are no movies added yet.</p>
+    </div>
 </main>
