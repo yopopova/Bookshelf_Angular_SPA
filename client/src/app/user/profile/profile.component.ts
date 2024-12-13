@@ -1,49 +1,44 @@
-import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 
+import { UserService } from '../user.service';
+import { ApiService } from 'src/app/api.service';
 import { ProfileDetails } from 'src/app/types/user';
-import { emailValidator } from 'src/app/shared/utils/email-validator';
-import { EMAIL_DOMAINS } from 'src/app/constants';
+import { Book } from 'src/app/types/book';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent {
-  showEditMode: boolean = false;
+export class ProfileComponent implements OnInit {
+  books: Book[] = [];
+  currentUserBooks: Book[] = [];
 
   profileDetails: ProfileDetails = {
-    username: 'Ivan',
-    photo: 'https://png.pngtree.com/png-vector/20230903/ourmid/pngtree-man-avatar-isolated-png-image_9935819.png',
-    city: 'Vidin',
-    email: 'ivan@gmail.com',
+    _id: '',
+    username: '',
+    photo: '',
+    city: '',
+    email: '',
   };
 
-  form = this.fb.group({
-    username: ['', [Validators.required, Validators.minLength(3)]],
-    photo: ['', [Validators.required]],
-    city: ['', [Validators.required]],
-    email: ['', [Validators.required, emailValidator(EMAIL_DOMAINS)]],
-  });
+  constructor(private userService: UserService, private apiService: ApiService) {}
 
-  constructor(private fb: FormBuilder) {}
+  ngOnInit(): void {
+    const { _id, username, photo, city, email } = this.userService.user!;
 
-  onToggle(): void {
-    this.showEditMode = !this.showEditMode;
-  }
-
-  saveProfileHandler(): void {
-    if (this.form.invalid) {
-      return;
+    this.profileDetails = {
+      _id,
+      username,
+      photo,
+      city,
+      email,
     }
 
-    this.profileDetails = this.form.value as ProfileDetails;
-    this.onToggle();
+    this.apiService.getAllBooks().subscribe(books => {
+      this.books = books;
+      this.currentUserBooks = this.books.filter((bookRecord) => bookRecord._ownerId === _id);
+    });
   }
-
-  onCancel(ev: Event) {
-    ev.preventDefault();
-    this.onToggle();
-  }
+  
 }

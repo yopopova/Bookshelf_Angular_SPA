@@ -1,6 +1,6 @@
-<div id="profile">
-    <ng-container *ngIf="!showEditMode">
-        <h1>Welcome, {{profileDetails.username}}!</h1>
+<div id="full-profile">
+    <div id="profile">
+        <h1>Welcome, {{profileDetails.username | uppercase}}!</h1>
 
         <div id="user">
             <div id="user-img">
@@ -8,7 +8,7 @@
             </div>
 
             <div id="user-info">
-                <h3><i class="fa-regular fa-user"></i> Full Name</h3>
+                <h3><i class="fa-regular fa-user"></i> Username</h3>
                 <p>{{profileDetails.username}}</p>
                 <h3><i class="fa-solid fa-earth-americas"></i> Location</h3>
                 <p>{{profileDetails.city}}</p>
@@ -16,72 +16,19 @@
                 <p>{{profileDetails.email}}</p>
             </div>
         </div>
+    </div>
 
-        <button class="btn-edit" (click)="onToggle()">Edit</button>
-    </ng-container>
+    <div id="main-div" *ngIf="currentUserBooks.length > 0">
+        <div *ngFor="let book of currentUserBooks">
+            <img src={{book.cover}} alt={{book.title}}>
+            <h1>{{book.title}}</h1>
+            <p><span>Author:</span> {{book.author}}</p>
+    
+            <a class="details-btn" routerLink="/catalog/{{book._id}}">Details</a>
+        </div>
+    </div>
 
-    <ng-container *ngIf="showEditMode">
-        <h1>Edit your info:</h1>
-
-        <form class="input-fields" [formGroup]="form" (ngSubmit)="saveProfileHandler()">
-            <label>Username</label>
-            <input
-            type="text"
-            name="username"
-            placeholder="Enter your username"
-            [value]="profileDetails.username"
-            formControlName="username"
-            />
-
-            <ng-container *ngIf="form.get('username')?.touched">
-                <p class="error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
-                <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">Username must be at least 3 characters!</p>
-            </ng-container>
-
-            <label>Photo</label>
-            <input
-            type="url"
-            name="photo"
-            placeholder="Enter your photo"
-            [value]="profileDetails.photo"
-            formControlName="photo"
-            />
-
-            <ng-container *ngIf="form.get('photo')?.touched">
-                <p class="error" *ngIf="form.get('photo')?.errors?.['required']">Photo is required!</p>
-            </ng-container>
-
-            <label>City</label>
-            <input
-            type="text"
-            name="city"
-            placeholder="Enter your city"
-            [value]="profileDetails.city"
-            formControlName="city"
-            />
-
-            <ng-container *ngIf="form.get('city')?.touched">
-                <p class="error" *ngIf="form.get('city')?.errors?.['required']">City is required!</p>
-            </ng-container>
-
-            <label>Email</label>
-            <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            [value]="profileDetails.email"
-            formControlName="email"
-            />
-
-            <ng-container *ngIf="form.get('email')?.touched">
-                <p class="error" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
-                <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">Email is not valid!</p>
-            </ng-container>
-
-            <div class="profile-btns">
-                <button class="btn-save">Save</button>
-                <button class="btn-cancel" (click)="onCancel($event)">Cancel</button>
-            </div>
-        </form>
-    </ng-container>
+    <div class="no-content" *ngIf="currentUserBooks.length === 0">
+        <p>You have no movies added yet.</p>
+    </div>
 </div>
