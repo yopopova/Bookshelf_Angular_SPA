@@ -105,6 +105,7 @@ h1 {
 }
 
 .no-content {
+    color: #010048;
     display: flex;
     align-items: center;
     justify-content: center;

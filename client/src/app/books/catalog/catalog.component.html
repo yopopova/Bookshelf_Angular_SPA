@@ -4,18 +4,20 @@
     </div>
 </section>
 
-<main id="main-div">
-    <div *ngFor="let book of books">
-        <img src={{book.cover}} alt={{book.title}}>
-        <h1>{{book.title}}</h1>
-        <p><span>Price:</span> {{book.price}}</p>
-        <p><span>Author:</span> {{book.author}}</p>
-        <p><span>Description:</span> {{ book.description | slice : 30 }}</p>
-
-        <a class="details-btn" routerLink={{book._id}}>Details</a>
+<main>
+    <div id="main-div">
+        <div *ngFor="let book of books">
+            <img src={{book.cover}} alt={{book.title}}>
+            <h1>{{book.title}}</h1>
+            <p><span>Price:</span> {{book.price}}</p>
+            <p><span>Author:</span> {{book.author}}</p>
+            <p><span>Description:</span> {{ book.description | slice : 30 }}</p>
+    
+            <a class="details-btn" routerLink={{book._id}}>Details</a>
+        </div>
     </div>
-
+    
     <div class="no-content" *ngIf="books.length === 0">
-        <p>There are no movies added yet.</p>
+        <p>There are no books added yet.</p>
     </div>
 </main>
