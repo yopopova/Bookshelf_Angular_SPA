@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { Like } from 'src/app/types/like';
 import { Book } from 'src/app/types/book';
 import { ApiService } from 'src/app/api.service';
 import { UserService } from 'src/app/user/user.service';
+import { LikesService } from '../likes.service';
 
 @Component({
   selector: 'app-book-details',
@@ -12,9 +14,11 @@ import { UserService } from 'src/app/user/user.service';
 })
 export class BookDetailsComponent implements OnInit {
   book = {} as Book;
+  bookLikes: string[] = [];
   isOwner: boolean = false;
+  alreadyLiked: boolean = false;
 
-  constructor(private apiService: ApiService, private userService: UserService, private router: Router, private activeRoute: ActivatedRoute) {}
+  constructor(private apiService: ApiService, private userService: UserService, private likesService: LikesService, private router: Router, private activeRoute: ActivatedRoute) {}
 
   get isLoggedIn(): boolean {
     return this.userService.isLogged;
@@ -38,6 +42,11 @@ export class BookDetailsComponent implements OnInit {
         // console.log(this.userId);
         // console.log(book._ownerId);
       });
+
+      this.likesService.getBookLikes(id).subscribe((likes: Like[]) => {
+        this.bookLikes = likes.map(x => x.userId);
+        console.log(this.bookLikes);
+      })
     });
   }
 
@@ -49,17 +58,25 @@ export class BookDetailsComponent implements OnInit {
     });
   }
 
-  // likeBook() {
-  //   this.book.likes.push(this.userId);
-  // }
+  likeBook() {
+    const idUser = this.userService.user?._id;
+    const idBook = this.book._id;
 
-  // dislikeBook() {
-  //   let currentIdIndex = this.book.likes.indexOf(this.userId);
-  //   this.book.likes.splice(currentIdIndex, 1);
-  // }
+    if (idUser === this.book._ownerId) {
+      return;
+    }
 
-  // isLiked(book: Book) {
-  //   const isLikedUser = book.likes.find((like) => like === this.userService.user?._id);    
-  //   return !!isLikedUser;
-  // }
+    if (this.bookLikes.includes(idUser!)) {
+      alert('You cannot like this book again.');
+      this.alreadyLiked = true;
+      return;
+    }
+
+    this.likesService.likeBook(idUser!, idBook).subscribe((like) => {
+      alert('You like this book successfully!');
+      // this.router.navigate([`/catalog/${idBook}`]);
+      // console.log(like);
+    });
+  }
+
 }
