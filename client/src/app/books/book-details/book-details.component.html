@@ -16,8 +16,15 @@
             <h3>Description</h3>
             <p>{{book.description}}</p>
 
-            <!-- <button *ngIf="isLoggedIn && !isLiked(book)" type="button" class="btn-like" (click)="likeBook()">Like: {{book.likes.length}}</button> -->
-            <!-- <button *ngIf="isLoggedIn && isLiked(book)" type="button" class="btn-dislike" (click)="dislikeBook()">Dislike: {{book.likes.length}}</button> -->
+            <div id="likes-section">
+                <div class="btn" *ngIf="isLoggedIn && !isOwner">
+                    <button class="btn-like" (click)="likeBook()">Like</button>
+                </div>
+
+                <div class="likes-info">
+                    <p class="total-likes">Likes: {{ bookLikes.length || 0 }}</p>
+                </div>
+            </div>
         </div>
     </div>
 
