@@ -15,3 +15,16 @@
 - `Logout` option where the user can logout from his profile
 - `404` view that is displayed when a user enters a link that does not exist
 
+## App Details
+
+The app is based on:
+
+- Angular (v16)
+- TypeScript
+- HTML
+- CSS
+- RESTful API
+- SoftUni Practice Server (as Database)
+- Gradient Magic Backgrounds
+- Font Awesome Icons
+
