@@ -107,3 +107,20 @@ For the user, the following endpoints are supported:
 - `GET /users/logout` - for user logout
 - `GET /users/me` - to get the information for logged in user and populate it in the user's profile
 
+## Premade Accounts
+
+The app database comes with the following premade user accounts, which you may use for login:
+
+```javascript
+{
+    "email": "peter@gmail.com",
+    "password": "123456" 
+}
+```
+and
+```javascript
+{
+    "email": "maria@gmail.com",
+    "password": "123456" 
+}
+```
