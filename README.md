@@ -28,3 +28,10 @@ The app is based on:
 - Gradient Magic Backgrounds
 - Font Awesome Icons
 
+## Project Content
+
+In the repository you will find two folders:
+
+- `client` folder contains the app's front-end part
+- `server` folder contains the app's back-end part
+
