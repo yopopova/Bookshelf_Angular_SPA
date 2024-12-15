@@ -62,3 +62,7 @@ Build at: 2024-12-14T09:50:17.256Z - Hash: 7a037ceabe1c386c - Time: 7679ms
 
 Click on `http://localhost:4200/` to open the app in your browser. After you finish working with the application, click on `client` terminal and press the `Ctrl+C` command to stop the front-end part of the application. Then click on the `server` terminal and press the same `Ctrl+C` command to stop the server.
 
+## SoftUni Practice Server as Database
+
+Please keep in mind that the database is based on SoftUni Practice Server created by [Viktor Kostadinov](https://github.com/viktorpts) and is not persistent. This means that you can register users, log in to your user profile, and create book recordings, but when you restart the server the data you made will be lost and the database will return to its initial state. If you want to know more about working with SoftUni Practice Server and its additional features you can [follow this link](https://github.com/softuni-practice-server/softuni-practice-server).
+
