@@ -86,3 +86,24 @@ books: {
 }
 ```
 
+## RESTful API
+
+For the app data, the following endpoints are supported:
+
+- `GET /data/books` - to get all the records from the database
+- `POST /data/books` - to create a book
+- `PUT /data/books/:id` - to edit a book
+- `DELETE /data/books/:id` - to delete a book
+
+For the likes, the following endpoints are supported:
+
+- `GET /data/likes` - to get all the likes for the current record
+- `POST /data/likes` - to make a like
+
+For the user, the following endpoints are supported:
+
+- `POST /users/register` - for user registration
+- `POST /users/login` - for user login
+- `GET /users/logout` - for user logout
+- `GET /users/me` - to get the information for logged in user and populate it in the user's profile
+
