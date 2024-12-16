@@ -10,7 +10,7 @@ export class AppInterceptor implements HttpInterceptor {
     API = '/api';
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log(req);
+        // console.log(req);
 
         if (req.url.startsWith(this.API)) {
             req = req.clone({
@@ -19,7 +19,7 @@ export class AppInterceptor implements HttpInterceptor {
             });
         }
 
-        console.log(req);
+        // console.log(req);
         
         return next.handle(req);
     }

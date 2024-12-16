@@ -45,7 +45,7 @@ export class BookDetailsComponent implements OnInit {
 
       this.likesService.getBookLikes(id).subscribe((likes: Like[]) => {
         this.bookLikes = likes.map(x => x.userId);
-        console.log(this.bookLikes);
+        // console.log(this.bookLikes);
       })
     });
   }

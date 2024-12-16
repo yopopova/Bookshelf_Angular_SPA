@@ -14,7 +14,7 @@ export class CatalogComponent implements OnInit {
 
     ngOnInit(): void {
         this.api.getAllBooks().subscribe(books => {
-            console.log(books);        
+            // console.log(books);
             this.books = books;
         });
     }

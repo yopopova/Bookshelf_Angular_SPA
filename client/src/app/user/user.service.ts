@@ -19,7 +19,7 @@ export class UserService implements OnDestroy {
   userSubscription: Subscription;
 
   get isLogged(): boolean {
-    console.log(this.user?.accessToken);
+    // console.log(this.user?.accessToken);
     return !!this.user;
   }
 
