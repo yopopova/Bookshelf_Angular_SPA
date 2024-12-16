@@ -13,7 +13,7 @@ const routes: Routes = [
       children: [
         { path: '', pathMatch: 'full', component: CatalogComponent },
         { path: ':bookId', component: BookDetailsComponent },
-        { path: ':bookId/edit', component: EditBookComponent }
+        { path: ':bookId/edit', component: EditBookComponent, canActivate: [AuthActivate] }
       ],
     },
     { path: 'add-book', component: AddBookComponent, canActivate: [AuthActivate] }  
@@ -23,4 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BooksRoutingModule { }
+export class BooksRoutingModule {}
