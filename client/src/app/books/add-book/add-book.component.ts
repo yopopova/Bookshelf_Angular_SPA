@@ -17,7 +17,7 @@ export class AddBookComponent {
       return;
     }
 
-    console.log(form.value);
+    // console.log(form.value);
 
     const { title, cover, author, pages, price, description } = form.value;
 
