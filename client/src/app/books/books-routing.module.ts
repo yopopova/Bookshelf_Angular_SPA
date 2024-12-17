@@ -5,7 +5,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
-import { AuthActivate } from '../guards/auth.activate';
+import { UnauthActivate } from '../guards/unauth.activate';
 
 const routes: Routes = [
     {
@@ -13,10 +13,10 @@ const routes: Routes = [
       children: [
         { path: '', pathMatch: 'full', component: CatalogComponent },
         { path: ':bookId', component: BookDetailsComponent },
-        { path: ':bookId/edit', component: EditBookComponent, canActivate: [AuthActivate] }
+        { path: ':bookId/edit', component: EditBookComponent, canActivate: [UnauthActivate] }
       ],
     },
-    { path: 'add-book', component: AddBookComponent, canActivate: [AuthActivate] }  
+    { path: 'add-book', component: AddBookComponent, canActivate: [UnauthActivate] }  
 ];
 
 @NgModule({
