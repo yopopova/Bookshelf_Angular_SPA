@@ -53,7 +53,6 @@ export class UserService implements OnDestroy {
     const { apiUrl } = environment;
     // localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
 
-
     return this.http.post<UserForAuth>(`${apiUrl}/users/register`, { username, photo, city, email, password, rePassword }).pipe(
       tap((user) => {
         this.user$$.next(user);
