@@ -18,25 +18,8 @@ export class LikesService {
   }
 
   getBookLikes(bookId: string) {
-    let arr: string[] = [];
     const { apiUrl } = environment;
     const query = encodeURIComponent(`bookId="${bookId}"`);
-    return this.http.get<Like[]>(`${apiUrl}/data/likes?select=userId&where=${query}`);
-    
-    // .pipe(
-    //   tap((record) => {
-    //     record.map(x => arr.push(x.userId)
-    //     );
-        
-    //     // record.map(x => x.userId)
-    //   })
-    // )
-
-    // return arr;
-
-    // return this.http.get<Like[]>(`${apiUrl}/data/likes?select=_id?where=bookId="${bookId}"`);
-
-    // NO
-    // return this.http.get<Like[]>(`${apiUrl}/data/likes?where=bookId="${bookId}"`);
+    return this.http.get<Like[]>(`${apiUrl}/data/likes?select=userId&where=${query}`).pipe(map(x => x.map(y => y.userId)));
   }
 }
