@@ -10,9 +10,10 @@ import { LikesService } from '../likes.service';
 @Component({
   selector: 'app-book-details',
   templateUrl: './book-details.component.html',
-  styleUrls: ['./book-details.component.css']
+  styleUrls: ['./book-details.component.css'],
 })
 export class BookDetailsComponent implements OnInit {
+  currentBookId: string = '';
   book = {} as Book;
   bookLikes: string[] = [];
   isOwner: boolean = false;
@@ -30,6 +31,7 @@ export class BookDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((data) => {
+      this.currentBookId = data['bookId'];
       const id = data['bookId'];
 
       this.apiService.getSingleBook(id).subscribe((book: Book) => {
@@ -57,7 +59,7 @@ export class BookDetailsComponent implements OnInit {
     const bookId = this.book._id;
 
     this.apiService.removeBook(bookId).subscribe(() => {
-      this.router.navigate(['/catalog']);
+      this.router.navigate(['/profile']);
     });
   }
 
@@ -76,9 +78,12 @@ export class BookDetailsComponent implements OnInit {
     }
 
     this.likesService.likeBook(idUser!, idBook).subscribe((like) => {
-      alert('You like this book successfully!');
-      // this.router.navigate([`/catalog/${idBook}`]);
+      alert('You liked this book successfully!');
       // console.log(like);
+    });
+
+    this.likesService.getBookLikes(this.currentBookId).subscribe((likes: string[]) => {
+      this.bookLikes = likes;
     });
   }
 
